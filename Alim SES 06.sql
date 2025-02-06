@@ -42,3 +42,15 @@ INSERT INTO ...;
 ROLLBACK; 
 
 END$$
+
+DELIMITER $$
+
+CREATE FUNCTION getTotalDept()
+RETURNS INT;
+BEGIN
+	DECLARE total;
+	SELECT COUNT(*) INTO total FROM departments;
+    RETURN total;
+END $$
+
+DELIMITER ;
