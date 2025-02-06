@@ -48,7 +48,7 @@ DELIMITER $$
 CREATE FUNCTION getTotalDept()
 RETURNS INT;
 BEGIN
-	DECLARE total;
+	DECLARE total int;
 	SELECT COUNT(*) INTO total FROM departments;
     RETURN total;
 END $$
